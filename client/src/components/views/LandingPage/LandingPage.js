@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Icon, Col, Card, Row } from "antd";
 import Meta from "antd/lib/card/Meta";
+import ImageSilder from "../../utils/ImageSilder";
 
 function LandingPage() {
   const [Products, setProducts] = useState([]);
@@ -17,20 +18,10 @@ function LandingPage() {
   }, []);
 
   const renderCards = Products.map((product, index) => {
-    console.log("product", product);
-
     return (
       <Col lg={6} md={8} xs={24} key={index}>
-        <Card
-          cover={
-            <img
-              style={{ width: "100%", maxHeight: "150px" }}
-              src={`http://localhost:5000/${product.images[0]}`}
-              alt="이미지"
-            />
-          }
-        >
-          <Meta title={product.title} description={`${product.price}`} />
+        <Card cover={<ImageSilder images={product.images} />}>
+          <Meta title={product.title} description={`$${product.price}`} />
         </Card>
       </Col>
     );
