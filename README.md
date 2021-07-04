@@ -37,7 +37,7 @@ Express JS
  
  <img style="width: 320px;" src="./client/src/gifs/4Cart.gif">
  
-5. 결제하기(Paypal 연동)
+5. 결제하기(Paypal 가상계좌 이용)
  <br />
  
  <img style="width: 320px;" src="./client/src/gifs/5Pay.gif">
